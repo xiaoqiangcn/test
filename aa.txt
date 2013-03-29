@@ -1,0 +1,3 @@
+update scm_order a, supplier b set a.supplier_code= b.member_id,a.gmt_modified = sysdate
+where a.gmt_create >= to_date('2013-01-01','yyyy-mm-dd') and a.supplier_code is not null 
+and  b.supplier_code=a.supplier_code 
